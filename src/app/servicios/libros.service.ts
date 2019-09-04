@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { LibrosInterface } from 'src/app/modelos/libros';
 
 @Injectable({
   providedIn: 'root'
@@ -13,5 +15,9 @@ export class LibrosService {
 
   public getLibros() {
     return this.http.get(this.rutaRest);
+  }
+
+  public getLibro(id: number): Observable<LibrosInterface> {
+    return this.http.get<LibrosInterface>(this.rutaRest + id);
   }
 }
