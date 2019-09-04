@@ -8,6 +8,8 @@ import { CrearComponent } from './componentes/crear/crear.component';
 import { EditarComponent } from './componentes/editar/editar.component';
 import { BorrarComponent } from './componentes/borrar/borrar.component';
 import { MenuComponent } from './componentes/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MenuComponent } from './componentes/menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
