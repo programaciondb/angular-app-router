@@ -1,1 +1,23 @@
-<p>editar works!</p>
+<div *ngIf="libro" class="text-white">
+        <p>
+            <input type="hidden" [(ngModel)]="libro.idlibro"> <br>
+            <label>Titulo</label>
+            <input class="form-control" [(ngModel)]="libro.titulo">
+        </p>
+        <p>
+            <label>Autor</label>
+            <input class="form-control" [(ngModel)]="libro.autor">
+        </p>
+        <p>
+            <label>Edicion</label>
+            <input class="form-control" [(ngModel)]="libro.edicion">
+        </p>
+        <p>
+            <label>Num. copias</label>
+            <input class="form-control" [(ngModel)]="libro.numcopias">
+        </p>
+        <p>
+            <button class="btn btn-warning mx-2" (click)="putLibro(libro.idlibro)">PUT</button>
+            <button class="btn btn-success" routerLink="/listar">Cancelar</button>
+        </p>
+    </div>
