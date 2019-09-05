@@ -10,8 +10,8 @@ const routes: Routes = [
   {path: "", redirectTo: "menu", pathMatch: "full"},
   {path: "listar", component: ListarComponent},
   {path: "crear", component: CrearComponent},
-  {path: "editar", component: EditarComponent},
-  {path: "borrar", component: BorrarComponent},
+  {path: "editar/:id", component: EditarComponent},
+  {path: "borrar/:id", component: BorrarComponent}
 ];
 
 @NgModule({

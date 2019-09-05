@@ -20,4 +20,23 @@ export class LibrosService {
   public getLibro(id: number): Observable<LibrosInterface> {
     return this.http.get<LibrosInterface>(this.rutaRest + id);
   }
+
+  public deleteLibro(id: number): Observable<LibrosInterface> {
+    return this.http.delete<LibrosInterface>(this.rutaRest + id);
+  }
+
+  public postLibro(libro: LibrosInterface):
+    Observable<LibrosInterface> {
+    return this.http.post<LibrosInterface>(
+      this.rutaRest, libro, this.httpOptions
+    );
+  }
+
+  public putLibro(id: number, libro: LibrosInterface):
+    Observable<LibrosInterface> {
+    return this.http.put<LibrosInterface>(
+      this.rutaRest + id, libro, this.httpOptions
+    );
+  }
+
 }

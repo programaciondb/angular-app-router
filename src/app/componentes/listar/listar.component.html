@@ -3,26 +3,21 @@
     <table class="table table-dark table-bordered table-striped">
       <thead>
         <tr>
+          <th>ID Libro</th>
           <th>Título</th>
           <th>Autor</th>
           <th>Edición</th>
           <th>Num.Copias</th>
-          <th>Acciones</th>
         </tr>
 
       </thead>
       <tbody>
         <tr *ngFor="let libro of libros">
+          <td>{{libro.idlibro}}</td>
           <td>{{libro.titulo}}</td>
           <td>{{libro.autor}}</td>
           <td>{{libro.edicion}}</td>
           <td>{{libro.numcopias}}</td>
-          <td>
-
-            <button class="btn btn-outline-warning" (click)="getLibro(libro.idlibro)">Editar</button>&nbsp;
-            <button class="btn btn-outline-danger" (click)="getLibro(libro.idlibro)">Borrar</button>
-
-          </td>
         </tr>
 
       </tbody>

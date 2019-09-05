@@ -1,1 +1,22 @@
-<p>borrar works!</p>
+<div *ngIf="libro" class="text-white">
+        <p>
+            <input type="hidden" [(ngModel)]="libro.idlibro"> <br>
+            <label>Titulo</label>
+            <input class="form-control disabled" readonly [(ngModel)]="libro.titulo">
+        </p>
+        <p>
+            <label>Autor</label>
+            <input class="form-control" readonly [(ngModel)]="libro.autor">
+        </p>
+        <p>
+            <label>Edicion</label>
+            <input class="form-control" readonly [(ngModel)]="libro.edicion">
+        </p>
+        <p>
+            <label>Num. copias</label>
+            <input class="form-control" readonly [(ngModel)]="libro.numcopias">
+        </p>
+        <p>
+            <button class="btn btn-danger" (click)="deleteLibro(libro.idlibro)">Eliminar</button>
+        </p>
+    </div>
