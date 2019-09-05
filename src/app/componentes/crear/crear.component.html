@@ -1,1 +1,23 @@
-
+<div *ngIf="nuevoLibro" class="text-white">
+        <p>
+            <input type="hidden" [(ngModel)]="nuevoLibro.idlibro"> <br>
+            <label>Titulo</label>
+            <input class="form-control" [(ngModel)]="nuevoLibro.titulo">
+        </p>
+        <p>
+            <label>Autor</label>
+            <input class="form-control" [(ngModel)]="nuevoLibro.autor">
+        </p>
+        <p>
+            <label>Edicion</label>
+            <input class="form-control" [(ngModel)]="nuevoLibro.edicion">
+        </p>
+        <p>
+            <label>Num. copias</label>
+            <input class="form-control" [(ngModel)]="nuevoLibro.numcopias">
+        </p>
+        <p>
+            <button class="btn btn-info mx-2" (click)="postLibro()">POST</button>
+            <button class="btn btn-success" routerLink="/listar">Cancelar</button>
+        </p>
+    </div>
